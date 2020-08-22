@@ -6,13 +6,13 @@ export default function PostsPage({ posts }) {
       Posts:
       {posts.map((el, i) => (
         <div key={i}>
-          <Link href={`/posts/post/${el.id}`}>
+          <Link href={`/posts/post/[id]`} as={`/posts/post/${el.id}`}>
             <a>{el.title}</a>
           </Link>
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 export async function getStaticProps() {

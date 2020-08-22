@@ -27,9 +27,7 @@ class CustomApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Provider {...this.mobxStore}>
-        <Container>
           <Component {...pageProps} />
-        </Container>
       </Provider>
     );
   }

@@ -6,13 +6,13 @@ export default function UsersPage({ users }) {
       USERS:
       {users.map((el, i) => (
         <div key={i}>
-          <Link href={`/user/${el.id}`}>
+          <Link href={`/users/user/[id]`} as={`/users/user/${el.id}`}>
             <a>{el.name}</a>
           </Link>
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 export async function getStaticProps() {
